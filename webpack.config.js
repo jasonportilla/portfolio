@@ -7,7 +7,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = {
-  entry: { main: './src/index.js'},
+  entry: { main: './src/js/index.js'},
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js',
@@ -46,7 +46,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
-      template: __dirname + '/src/index.html',
+      template: __dirname + '/src/html/index.html',
       filename: 'index.html'
     })
   ]

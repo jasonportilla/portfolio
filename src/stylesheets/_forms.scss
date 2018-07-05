@@ -1,0 +1,343 @@
+/* MS IE Hide clear icon for browser consistency */
+input::-ms-clear {
+  display: none;
+}
+
+/* Safari hide password autofill icon */
+input::-webkit-credentials-auto-fill-button,
+input:active::-webkit-credentials-auto-fill-button,
+input:focus::-webkit-credentials-auto-fill-button {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  visibility: hidden;
+}
+
+.currency-prefix {
+  padding: 10px 0 0 0;
+  font-size: 20px;
+}
+
+/* Generic Form Styling */
+.form-horizontal {
+  .form-group {
+    margin: 0;
+  }
+}
+
+.form-group {
+  &.has-error {
+    margin-bottom: 0;
+  }
+  .control-label {
+    font-weight: bold;
+  }
+}
+
+.form-control {
+  font-size: $font-base-size;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(220, 221, 223, 1);
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  &.gray {
+    background-color: $color-gray-form-control;
+  }
+}
+
+/* Form Group Button Overlays */
+.input-group-overlay {
+  position: relative;
+
+  .input-group-actions {
+    bottom: 0;
+    line-height: $base-spacing * 6;
+    position: absolute;
+    right: $base-spacing * 2;
+
+    .action {
+      float: left;
+      margin-left: $base-spacing;
+      text-decoration: none;
+
+      &.btn {
+        margin: 0;
+      }
+    }
+  }
+
+  .has-error {
+    & + .input-group-actions {
+      bottom: $base-spacing * 3.5;
+      right: $base-spacing * 7;
+      &.show-hide-btn {
+        bottom: auto;
+        top: 40px;
+        right: $base-spacing * 7;
+      }
+    }
+  }
+}
+
+/* Buttons */
+
+button.mainButton {
+  font-family: 'Rubik-Light';
+  font-size: $font-base-size;
+  background-color: $color-primary;
+  &:hover {
+    background-color: $color-secondary !important;
+  }
+}
+
+/* Checkmarks and Radio Buttons */
+.radio, .checkbox {
+  margin-bottom: $base-spacing * 2;
+}
+
+.radio,
+.radio-inline {
+  label {
+    line-height: 16px;
+    padding-left: 32px;
+    width: 100%;
+  }
+
+  input[type="radio"] {
+    display: none;
+
+    & + span {
+
+      &:before {
+        background-color: #ffffff;
+        border: 1px solid #e6e6e6;
+        border-radius: 20px;
+        box-shadow: 0px 0px 2px 0px #000000;
+        content: "";
+        display: inline;
+        height: 20px;
+        left: 0;
+        position: absolute;
+        width: 21px;
+        margin-top: -2px;
+      }
+
+      &:hover:before {
+        background-color: #e8e8e8;
+        border: 1px solid #e6e6e6;
+        border-radius: 20px;
+        box-shadow: 0px 0px 2px 0px #000000;
+        content: "";
+        height: 20px;
+        left: 0;
+        position: absolute;
+        width: 21px;
+        margin-top: -2px;
+      }
+    }
+
+    &:checked + span:before {
+      background-color: #15a4a7;
+      border: 1px solid #e6e6e6;
+      border-radius: 20px;
+      box-shadow: 0px 0px 2px 0px #000000;
+      color: #ffffff;
+      content: "\2022";
+      display: inline;
+      font-size: 40px;
+      height: 20px;
+      left: 0;
+      margin-top: -2px;
+      position: absolute;
+      text-align: center;
+      text-shadow: 0px 0px 8px #3d3d3d;
+      width: 21px;
+    }
+  }
+}
+
+.checkbox {
+  label {
+    line-height: 20px;
+    padding-left: $base-spacing * 4;
+  }
+
+  input[type="checkbox"] {
+    opacity: 0.01;
+
+    & + span {
+      &:before {
+        background-color: #ffffff;
+        border: 1px solid #e6e6e6;
+        box-shadow: 0px 0px 2px 0px #000000;
+        content: "";
+        display: inline;
+        height: 20px;
+        left: 0;
+        position: absolute;
+        width: 20px;
+        margin-top: -2px;
+      }
+      &:hover:before {
+        background-color: #e8e8e8;
+        border: 1px solid #e6e6e6;
+        box-shadow: 0px 0px 2px 0px #000000;
+        content: "";
+        height: 20px;
+        left: 0;
+        position: absolute;
+        width: 20px;
+        margin-top: -2px;
+      }
+    }
+
+    &:checked + span:before {
+      background-color: #15a4a7;
+      border: 1px solid #e6e6e6;
+      box-shadow: 0px 0px 2px 0px #000000;
+      color: #ffffff;
+      content: "\2713";
+      display: inline;
+      font-size: 20px;
+      height: 20px;
+      left: 0;
+      margin-top: -2px;
+      position: absolute;
+      text-align: center;
+      text-shadow: 0px 0px 8px #3d3d3d;
+      vertical-align: middle;
+      width: 21px;
+    }
+
+    &:focus + span:before {
+      border: 1px solid #15a4a7;
+      box-shadow: 0px 0px 2px 0px #000000;
+    }
+  }
+}
+
+/* Buttons */
+
+// Fixes to overwirte this CSS that steps all over our code -_-
+.btn, .btn:not(.btn-link) {
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-family: 'Rubik-Light' !important;
+  font-size: $font-base-size;
+  height: $base-spacing * 6;
+  line-height: $base-spacing * 3;
+  margin-bottom: $base-spacing * 2;
+  min-width: 0;
+  padding: ($base-spacing * 1.5) ($base-spacing * 3);
+  text-align: center;
+  text-decoration: none;
+
+  &.btn-default,
+  &.btn-success,
+  &.btn-info,
+  &.btn-warning,
+  &.btn-danger,
+  {
+      background-color: #FAFAFA;
+      background-image: linear-gradient(to bottom, #FAFAFA 0%, #F0F0F0 100%);
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+      border: 1px solid #B8BABC;
+      border-radius: 4px;
+      color: $color-primary;
+      font-family: 'Rubik-Regular';
+      font-size: $font-base-size;
+      height: $base-spacing * 6;
+      line-height: $base-spacing * 3;
+      margin-bottom: $base-spacing * 2;
+      padding: ($base-spacing * 1.5) ($base-spacing * 3);
+      text-align: center;
+
+      &:hover, &:focus, &:active, &.active, &:active:hover, &.active:hover {
+          border-color: lighten(#B8BABC, 15%);
+      }
+      &:hover, &:focus {
+          background-color: #FFF;
+          background-image: linear-gradient(to bottom, #FFF 0%, #F0F0F0 100%);
+      }
+      &:active, &.active, &:active:hover, &.active:hover {
+          background-color: #F0F0F0;
+          color: $color-text-dark;
+      }
+
+  }
+
+  &.btn-link  {
+      color: $color-primary-link;
+      padding: ($base-spacing * 1.5) 0;
+      text-decoration: underline;
+
+      &:hover, &:focus {
+          color: $color-primary-link-hover;
+      }
+
+      &:active, &.active, &:active:hover, &.active:hover {
+          color: $color-primary-link-active;
+      }
+
+      &.close {
+          height: auto;
+          margin: 0;
+          padding: $base-spacing;
+          width: auto;
+          opacity: 1;
+          text-decoration: none;
+      }
+  }
+
+  &.btn-primary {
+      background: #15a4a7; 
+      background: linear-gradient(to bottom, #15a4a7 0%,#1f8b91 100%,#009db2 100%) !important;
+      border-color: transparent;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+      color: #FFF;
+      font-size: 19px;
+      &:hover, &:focus, &:active, &.active, &:active:hover, &.active:hover {
+          border-color: transparent;
+          color: #FFF;
+      }
+      &:hover, &:focus {
+          background: #107C88;
+      }
+      &:active, &.active, &:active:hover, &.active:hover {
+          background-image: linear-gradient(to bottom, #006F7B 0%, #006F7B 100%);
+      }
+  }
+
+  &:not(.btn-link):disabled, &:not(.btn-link)[disabled] {
+      background: $color-gray-medium;
+      background-color: $color-gray-medium;
+      border: 1px solid $color-gray-medium;
+      color: #FFF;
+      cursor: not-allowed;
+
+      &:hover, &:focus, &:active, &:active:hover {
+          background: $color-gray-medium;
+          background-color: $color-gray-medium;
+          border: 1px solid $color-gray-medium;
+          color: #FFF;
+          cursor: not-allowed;
+      }
+  }
+
+  &.btn-secondary {
+      outline: none;
+      font-size: 19px;
+      color: $color-primary-link;
+      &:hover, &:focus, &:active, &:active:hover {
+          color: $color-primary-link-hover;
+          border-color: $color-primary-link-hover;
+      }
+  }
+
+  &.btn-sm {
+      font-size: $base-spacing * 2;
+  }
+} 

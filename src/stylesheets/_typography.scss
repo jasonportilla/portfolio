@@ -1,0 +1,185 @@
+html {
+  font-size: 1em;
+}
+
+body {
+  font-family: 'Rubik-Light', Arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $color-text-dark;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-weight: inherit;
+}
+
+h1 , .h1{
+  font-size: $base-spacing * 6;
+  line-height: $base-spacing * 6;
+  margin-bottom: $base-spacing * 4;
+  margin-top: 0;
+
+  &.border-bottom {
+    border-bottom: 1px solid #b9bcc0;
+    padding-bottom: $base-spacing * 3;
+  }
+}
+
+h2, .h2 {
+  font-size: $base-spacing * 5;
+  line-height: $base-spacing * 6;
+  margin-bottom: $base-spacing * 3;
+  margin-top: 0;
+
+  &.border-bottom {
+    border-bottom: 1px solid #b9bcc0;
+    padding-bottom: $base-spacing * 3;
+
+
+  }
+}
+
+h3, .h3 {
+  font-size: $base-spacing * 4;
+  line-height: $base-spacing * 4;
+  margin-bottom: $base-spacing * 2;
+  margin-top: 0;
+
+  &.border-bottom {
+    border-bottom: 1px solid #b9bcc0;
+    padding-bottom: $base-spacing * 2;
+
+
+  }
+}
+
+h4, .h4 {
+  font-size: $base-spacing * 3;
+  line-height: $base-spacing * 3;
+  margin-bottom: $base-spacing;
+  margin-top: $base-spacing;
+
+  &.border-bottom {
+    border-bottom: 1px solid #b9bcc0;
+    padding-bottom: $base-spacing;
+  }
+}
+
+h5, .h5 {
+  font-size: $base-spacing * 2.5;
+  line-height: $base-spacing * 3;
+  margin-bottom: $base-spacing;
+  margin-top: $base-spacing * 2;
+
+  &.border-bottom {
+    border-bottom: 1px solid #b9bcc0;
+    padding-bottom: $base-spacing;
+  }
+}
+
+h6, .h6 {
+  font-family: 'Rubik-Regular';
+  font-size: $base-spacing * 2;
+  line-height: $base-spacing * 3;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: $base-spacing * 2;
+}
+
+a {
+  color: $color-primary;
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: 'Rubik-Regular';
+}
+
+small, .text-small {
+  font-size: 0.875rem;
+}
+
+strong, .text-strong {
+  font-family: 'Rubik-Medium';
+  font-weight: normal;
+}
+
+.text-medium {
+  font-family: 'Rubik-Regular';
+  font-weight: normal;
+}
+
+.text-light {
+  font-family: 'Rubik-Light';
+  font-weight: normal;
+}
+
+.text-no-underline {
+  text-decoration: none !important;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 1px;
+}
+
+@include screen-xs {
+  .text-xs-left { text-align: left; }
+  .text-xs-center { text-align: center; }
+  .text-xs-right { text-align: right; }
+}
+
+@include screen-sm {
+  .text-sm-left { text-align: left; }
+  .text-sm-center { text-align: center; }
+  .text-sm-right { text-align: right; }
+}
+
+@include screen-md {
+  .text-md-left { text-align: left; }
+  .text-md-center { text-align: center; }
+  .text-md-right { text-align: right; }
+}
+
+@include screen-lg {
+  .text-lg-left { text-align: left; }
+  .text-lg-center { text-align: center; }
+  .text-lg-right { text-align: right; }
+}
+
+.text-inline {
+  display: inline-block;
+  margin-right: $base-spacing;
+
+  &.text-right {
+    float: right;
+    margin-left: $base-spacing;
+    margin-right: 0;
+
+    &:after {
+      clear: both;
+      content: '';
+      display: table;
+    }
+  }
+}
+
+hr {
+  margin-top: $base-spacing * 2;
+  margin-bottom: $base-spacing *2;
+  border-top: 1px solid #b9bcc0;
+  &.hr-muted {
+    border-top: 1px solid #dcdddf;
+  }
+}
+
+label {
+  color: #515761;
+  font-family: 'Rubik-Regular';
+  font-size: $font-base-size;
+  line-height: $base-spacing * 3;
+  letter-spacing: 1px;
+  margin-bottom: $base-spacing;
+  margin-top: $base-spacing;
+}

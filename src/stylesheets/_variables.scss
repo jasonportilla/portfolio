@@ -1,0 +1,69 @@
+/* Border Radius */
+$border-radius-lg: 10px;
+$border-radius-md: 5px;
+$border-radius-sm: 2px;
+
+//Common Border Styles
+$box-shadow-styles: 0 0 10px 1px rgba(0,0,0,0.125);
+
+/* Colors */
+$color-primary: #cfd9df;
+$color-primary-light: #e2ebf0;
+$color-primary-dark: #68b0ab;
+
+$color-primary-link: #f06449;
+$color-primary-link-hover: #9dc5bb;
+$color-primary-link-active: #4bc6b9;
+$color-primary-link-visited: #424b54;
+
+
+$color-primary-light-hover: lighten($color-primary, 5%);
+$color-primary-dark-hover: darken($color-primary, 5%);
+
+$color-secondary: #f5f1ed;
+$color-secondary-dark: #70798c;
+$color-secondary-link: #515761;
+$color-secondary-link-hover: #40454E;
+$color-secondary-link-active: #747981;
+$color-secondary-link-visited: #515761;
+
+$color-text-dark: #515761;
+
+$color-gray-light: #F8F8F8;
+$color-gray-medium: #b9bcc0;
+
+$color-gray-table-header: #DCDDDF;
+$color-gray-form-control: #EDEEEF;
+
+$text-muted: #b9bcc0;
+
+$color-mobile-menu-divider: #F06449;
+
+//$text-primary: ;
+$text-success: #4DA167;
+$text-info: #3F88C5;
+$text-warning: #FFD131;
+$text-danger: #E54B4B;
+
+/* Contextual backgrounds */
+$bg-muted: #f8f8f9;
+//$bg-primary: ;
+$bg-success: #f7faf5;
+$bg-info: #f2fafd;
+$bg-warning: #fffbf4;
+
+/* Fonts */
+$font-base-size: 16px;
+
+/* Spacing */
+$base-spacing: 8px;
+
+/* Responsive Breakpointss */
+$screen-sm-min: 768px; // Small screen / tablet
+$screen-md-min: 992px; // Medium screen / desktop
+$screen-lg-min: 1200px; // Large screen / wide desktop
+
+/*Animation*/
+$animation-speed-fast: 100ms;
+$animation-speed-medium: 250ms;
+$animation-speed-slow: 400ms;
