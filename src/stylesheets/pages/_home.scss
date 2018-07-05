@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.homepage {
+  .homepage__header {
+    display: inline-block;
+    padding: 0;
+    margin: 45px;
+    height: 45px;
+  }
+  .left-nav {
+    width: 5%;
+  }
+  .center {
+    width: 90%;
+  }
+  .right-nav {
+    width: 5%;
+  }
+  .homepage__welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient($color-primary, $color-primary-light);
+    height: 90vh;
+    .hompeage_welcome__hello {
+      position: relative;
+      .oval-svg {
+        position: absolute;
+        right: 10px;
+        top:60px;
+      }
+      .square-svg {
+        position: absolute;
+        bottom: 70px;
+        left: -55px;
+      }
+      .polygon-svg {
+        position: absolute;
+        top: -20px;
+        left: -70px;
+      }
+      .triangle-svg {
+        position: absolute;
+        left: 43%;
+        bottom: -2%;
+      }
+      h1 {
+        line-height: 100px;
+        text-align: inherit;
+        font-size: $font-base-size * 5;
+      }
+    }
+    .sub-header {
+      color: $color-primary-red;
+    }
+  }
+}
